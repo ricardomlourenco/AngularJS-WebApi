@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en-us" ng-app="angularApp">
+<html lang="en-us" ng-app="app">
     <head>
         <title>Introduction to AngularJS</title>
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -26,38 +26,14 @@
 			<nav class="navbar navbar-default">
 			<div class="container">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/">AngularJS</a>
+                    <a href="#" class="navbar-brand">Home</a>
 				</div>
-
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-				</ul>
 			</div>
 			</nav>
 		</header>
 
         <div class="container">
-
-            <div ng-controller="mainController">
-
-                <h1>Angular Udemy</h1>
-                <div>
-                    <label>What's your twitter?</label>
-                    <input type="text" ng-model="handle" />
-
-                </div>
-
-                <h2>twitter.com/{{ lowercasehandle() }}</h2>
-
-                <ul>
-                    <li ng-repeat="rule in rules">
-                        {{ rule}}
-                    </li>
-                </ul>
-
-            </div>
-
+            <div ng-view></div>          
         </div>
-
     </body>
 </html>
