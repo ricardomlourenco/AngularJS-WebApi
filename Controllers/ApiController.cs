@@ -9,7 +9,7 @@ public class ApiController : ControllerBase
     public IEnumerable<string> Get()
     {
         return new string[] {
-            "Rule 03"
-            };
+            ""
+        };
     }
 }
