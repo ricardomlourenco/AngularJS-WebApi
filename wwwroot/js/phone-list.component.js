@@ -1,15 +1,7 @@
 angular.
   module('main').
   component('phoneList', {  // This name is what AngularJS uses to match to the `<phone-list>` element.
-    template:
-        '<div class="card" style="width: 18rem;">' +
-        '<ul class="list-group list-group-flush>' +
-          '<li class="list-group-item" ng-repeat="phone in $ctrl.phones">' +
-            '<span>{{phone.name}}</span>' +
-            '<p>{{phone.snippet}}</p>' +
-          '</li>' +
-        '</ul>' +
-        '</div>',
+    templateUrl: 'js/phone-list/phone-list.template.html',
     controller: function PhoneListController() {
       this.phones = [
         {
