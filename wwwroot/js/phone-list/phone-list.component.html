@@ -3,10 +3,18 @@
   <div class="col-md-2 mt-1">
     Search: <input type="text" ng-model="$ctrl.query" />
   </div>
+  <div class="col-md-2 mt-1">
+    Sort by:
+        <select ng-model="$ctrl.orderProp">
+          <option value="name">Alphabetical</option>
+          <option value="age">Newest</option>
+        </select>
+  </div>
+  <span>debug: {{$ctrl.orderProp}}</span>
 
   <div class="card mt-3" style="width: 18rem;">
     <ul class="list-group list-group-flush>
-      <li class="list-group-item" ng-repeat="phone in $ctrl.phones | filter:$ctrl.query">
+      <li class="list-group-item" ng-repeat="phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp">
         <span>{{phone.name}}</span>
         <p>{{phone.snippet}}</p>
       </li> 
